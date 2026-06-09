@@ -1,0 +1,10 @@
+[package]
+name = "zpld-framework"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Core framework for zero packet loss network daemons"
+
+[dependencies]

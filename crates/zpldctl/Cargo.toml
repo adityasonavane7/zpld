@@ -1,0 +1,11 @@
+[package]
+name = "zpldctl"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "CLI tool for managing the zpld supervisor and workers"
+
+[dependencies]
+zpld-framework = { path = "../zpld-framework" }

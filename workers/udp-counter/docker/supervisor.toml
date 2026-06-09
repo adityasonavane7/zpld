@@ -1,0 +1,10 @@
+[supervisor]
+control_socket = "/run/zpld/supervisor.sock"
+state_store    = "/run/zpld/state.db"
+
+[[worker]]
+id            = "udp-counter-1"
+binary        = "/usr/sbin/udp-counter"
+config        = "/etc/zpld/udp-counter.toml"
+auto_restart  = true
+update_policy = "lazy"

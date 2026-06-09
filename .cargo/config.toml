@@ -1,0 +1,13 @@
+[build]
+# Uncomment to use the mold linker for faster incremental builds.
+# Requires: apt install mold
+# rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+[profile.dev]
+# Faster debug builds — splits codegen into parallel units.
+codegen-units = 16

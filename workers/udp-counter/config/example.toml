@@ -1,0 +1,12 @@
+# udp-counter worker configuration
+
+[worker]
+# Address and port to listen on for incoming UDP packets.
+listen_addr = "0.0.0.0:9000"
+
+# Only count packets from this source address.
+# If unset, all incoming packets are counted.
+# source_filter = "192.168.1.10"
+
+# How often the worker writes a heartbeat to the StateStore (seconds).
+heartbeat_interval_secs = 5

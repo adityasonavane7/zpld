@@ -1,0 +1,11 @@
+[Unit]
+Description=zpld Supervisor Control Socket
+Documentation=https://github.com/your-org/zpld
+
+[Socket]
+ListenStream=/run/zpld/supervisor.sock
+SocketMode=0660
+SocketGroup=zpld
+
+[Install]
+WantedBy=sockets.target

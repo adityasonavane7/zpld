@@ -1,0 +1,30 @@
+[Unit]
+Description=zpld Supervisor — Zero Packet Loss Daemon Manager
+Documentation=https://github.com/your-org/zpld
+After=network.target
+Wants=zpld-supervisor.socket
+
+[Service]
+Type=notify
+ExecStart=/usr/sbin/zpld-supervisor --config /etc/zpld/supervisor.toml
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+
+# Runtime directory for sockets and state store
+RuntimeDirectory=zpld
+RuntimeDirectoryMode=0750
+
+# Capabilities needed for network daemon management
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_RAW
+NoNewPrivileges=yes
+
+# Filesystem hardening
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/run/zpld /var/log/zpld
+
+[Install]
+WantedBy=multi-user.target

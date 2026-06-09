@@ -1,0 +1,11 @@
+[package]
+name = "zpld-supervisor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Supervisor process for zpld worker lifecycle management"
+
+[dependencies]
+zpld-framework = { path = "../zpld-framework" }

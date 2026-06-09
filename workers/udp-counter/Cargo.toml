@@ -1,0 +1,11 @@
+[package]
+name = "udp-counter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Reference zpld worker — counts UDP packets from a configured source"
+
+[dependencies]
+zpld-framework = { path = "../../crates/zpld-framework" }

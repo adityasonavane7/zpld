@@ -1,0 +1,36 @@
+# zpld-supervisor configuration
+
+[supervisor]
+# Path to the Unix socket exposed for zpldctl.
+control_socket = "/run/zpld/supervisor.sock"
+
+# Path to the memory-mapped state store file.
+state_store = "/run/zpld/state.db"
+
+# How often to check worker heartbeats (seconds).
+heartbeat_interval_secs = 5
+
+# How long a worker can miss heartbeats before it is declared dead (seconds).
+heartbeat_timeout_secs = 15
+
+# [[worker]] defines each managed worker process.
+# Add one block per worker instance.
+
+[[worker]]
+# Unique identifier for this worker. Used by zpldctl commands.
+id = "udp-counter-1"
+
+# Path to the worker binary.
+binary = "/usr/sbin/udp-counter"
+
+# Path to the worker's own config file, passed as --config.
+config = "/etc/zpld/udp-counter.toml"
+
+# Automatically restart the worker if it dies unexpectedly.
+auto_restart = true
+
+# Update policy:
+#   lazy      — wait for stability before swapping (recommended)
+#   immediate — swap as soon as a new binary is available
+#   manual    — only swap when explicitly triggered via zpldctl
+update_policy = "lazy"

@@ -1,0 +1,19 @@
+services:
+  supervisor:
+    build:
+      context: ../../../
+      dockerfile: workers/udp-counter/docker/Dockerfile
+    volumes:
+      - /run/zpld:/run/zpld
+    cap_add:
+      - NET_ADMIN
+    command: zpld-supervisor --config /etc/zpld/supervisor.toml
+
+  sender:
+    image: alpine
+    depends_on: [supervisor]
+    command: >
+      sh -c 'while true; do
+        echo "ping" | nc -u -w1 supervisor 9000;
+        sleep 1;
+      done'
