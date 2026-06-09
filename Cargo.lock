@@ -4,16 +4,25 @@ version = 4
 
 [[package]]
 name = "udp-counter"
-version = "0.1.0"
+version = "0.1.1"
+dependencies = [
+ "zpld-framework",
+]
 
 [[package]]
 name = "zpld-framework"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "zpld-supervisor"
-version = "0.1.0"
+version = "0.1.1"
+dependencies = [
+ "zpld-framework",
+]
 
 [[package]]
 name = "zpldctl"
-version = "0.1.0"
+version = "0.1.1"
+dependencies = [
+ "zpld-framework",
+]
