@@ -1,6 +1,6 @@
 [Unit]
 Description=zpld Supervisor Control Socket
-Documentation=https://github.com/your-org/zpld
+Documentation=https://github.com/adityasonavane7/zpld
 
 [Socket]
 ListenStream=/run/zpld/supervisor.sock

@@ -1,6 +1,6 @@
 [Unit]
 Description=zpld Supervisor — Zero Packet Loss Daemon Manager
-Documentation=https://github.com/your-org/zpld
+Documentation=https://github.com/adityasonavane7/zpld
 After=network.target
 Wants=zpld-supervisor.socket
 

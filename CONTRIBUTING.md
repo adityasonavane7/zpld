@@ -7,7 +7,7 @@
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Clone and build
-git clone https://github.com/your-org/zpld
+git clone https://github.com/adityasonavane7/zpld
 cd zpld
 cargo build
 ```
