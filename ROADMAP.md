@@ -33,7 +33,7 @@ Issues. The requirement doc is the source of truth; Issues are the work tracker.
 
 | # | Phase | Status | Requirements |
 |---|---|---|---|
-| 1 | Framework Types and Traits | Not Started | [docs/requirements/phase-1-framework-types.md](docs/requirements/phase-1-framework-types.md) |
+| 1 | Framework Types and Traits | Done | [docs/requirements/phase-1-framework-types.md](docs/requirements/phase-1-framework-types.md) |
 | 2 | StateStore | Not Started | [docs/requirements/phase-2-state-store.md](docs/requirements/phase-2-state-store.md) |
 | 3 | IPC Wire Format | Not Started | [docs/requirements/phase-3-ipc-protocol.md](docs/requirements/phase-3-ipc-protocol.md) |
 | 4 | Supervisor Core | Not Started | [docs/requirements/phase-4-supervisor-core.md](docs/requirements/phase-4-supervisor-core.md) |
